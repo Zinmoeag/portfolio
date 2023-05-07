@@ -1,24 +1,37 @@
-import { faBars} from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import '@fortawesome/fontawesome-free/css/all.min.css';
+import { faMagnifyingGlass,faHouse,faBars  } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {Link} from "react-router-dom";
+import Searcher from "../components/Searcher.js";
 
-export default function Nav(){
-	const sideBarToggle = ( ) => {
-		console.log("siderbaar");
-	} 
+export default function Nav({setIsMenuOn}){
+
 
 	return (
 
-		<div className="relative">
-			<button className="p-2 py-1 bg-slate-900 hover:bg-slate-800 absolute top-6 right-6" onClick={sideBarToggle} >
-				<FontAwesomeIcon icon={faBars} className="text-white text-xl" />
-			</button>
+		<nav className="bg-slate-800">
+			<div className="lg:mx-20 md:mx-10 mx-4  flex itens-center justify-between relative">
+				<div className="name uppercase text-white font-bold text-xl md:flex items-center hidden">
+					PortFolio
+				</div>
+
+				<Searcher />
+
+				<div className="icon-box flex gap-4 items-center text-white">
+					<Link to="/">
+						<button type="button" className="hover:text-slate-400">
+							<FontAwesomeIcon icon={faHouse} />
+						</button>
+					</Link>
 
 
-			<div className="absolute bg-slate-800 h-[100vh]">
-				sidebar
+					<button type="button" className="md:hidden" onClick={e => setIsMenuOn(true)}>
+						<FontAwesomeIcon icon={faBars} />
+					</button>
+					
+				</div>
+
 			</div>
-		</div>
+		</nav>
 		
 	)
 }

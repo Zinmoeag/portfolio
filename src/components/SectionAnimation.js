@@ -6,7 +6,6 @@ export default function SectionAnimation({children,option = "left"}){
 	const [direction, setDirection] = useState(option);
 	const targetRef = useRef(null);
 
-
 	useEffect(() => {
 		const Observer = new IntersectionObserver(entries => {
 			entries.forEach(entry => {

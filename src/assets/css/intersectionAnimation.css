@@ -2,6 +2,7 @@
 	animation: Intersection 1s ease-in-out;
 }
 
+
 .rightAnimate{
   animation: RightIntersection 1s ease-in-out;
 }
@@ -35,7 +36,7 @@
 @keyframes TopIntersection {
   from {
     opacity: 0;
-    transform: translateY(-15rem);
+    transform: translateY(-6rem);
   }
   to {
     opacity: 1;

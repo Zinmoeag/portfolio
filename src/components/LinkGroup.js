@@ -36,7 +36,6 @@ function LinkgroupUi(){
 }
 
 
-
 export default function LinkGroup(){
 	return(
 		<MyData>
