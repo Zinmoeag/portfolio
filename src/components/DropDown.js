@@ -25,8 +25,7 @@ export default function DropDown(){
 	return(
 
 		<>
-
-		<div className="dropDown me-4 relative">
+		<div className=" me-4 relative"> 
 					<button type="button" className="bg-slate-800 px-3 py-2 text-white w-32" onClick={dropdownToggle}>{category}</button>
 					<ul className={`absolute right-0 top-12 bg-slate-800 w-60 opacity-80 backdrop-blur-sm ${!isOn ? "hidden" :  ""}`}>
 						<li className="border-b-2 border-slate-700">

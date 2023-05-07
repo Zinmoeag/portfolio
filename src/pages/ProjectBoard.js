@@ -8,7 +8,7 @@ import MyData from "../providers/MyData.js";
 import Project from "../parts/Project.js"; 
 import Certi from "../parts/Certi.js"; 
 import Menu from "../components/Menu.js";
-import DropDown from "../components/DropDown.js";
+
 
 
 export default function ProjectBoard(){
@@ -22,7 +22,7 @@ export default function ProjectBoard(){
 
 		<ProjectData>
 
-			<Nav setIsMenuOn={setIsMenuOn} className=" relative z-50" />
+			<Nav setIsMenuOn={setIsMenuOn} className="relative z-50" />
 
 			<MyData>
 				<Menu  setPart={setPart} isMenuOn={isMenuOn} setIsMenuOn={setIsMenuOn} />
