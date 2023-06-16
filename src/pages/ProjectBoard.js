@@ -22,7 +22,7 @@ export default function ProjectBoard(){
 
 		<ProjectData>
 
-			<Nav setIsMenuOn={setIsMenuOn} className="relative z-50" />
+			<Nav setIsMenuOn={setIsMenuOn} className="fixed z-50" />
 
 			<MyData>
 				<Menu  setPart={setPart} isMenuOn={isMenuOn} setIsMenuOn={setIsMenuOn} />
@@ -32,7 +32,7 @@ export default function ProjectBoard(){
 
 
 			<section className="content grid grid-cols-10 lg:ms-[14rem] md:ms-[10rem]">
-				<div className="lg:col-span-10 md:col-span-10 col-span-10">
+				<div className="lg:col-span-10 md:col-span-10 col-span-10 mt-10">
 					<div className="bg-slate-800 w-full px-6 py-8">
 						<SectionAnimation option={"top"}>
 							<div className="text-white md:w-[25rem] w-full z-10">
@@ -53,7 +53,7 @@ export default function ProjectBoard(){
 							 {part === "certificate" && <Certi /> }
 						</section>
 
-						<div className="col-span-2 px-2 hidden lg:block">
+						<div className="col-span-2 px-2 hidden lg:block bg-slate-300">
 							<SectionAnimation > 
 								<div className="w-full bg-gradient-to-r from-cyan-500 to-lime-200 shadow-lg px-2 h-16 rounded-lg my-2 text-white text-xl font-bold flex items-center">Projects - 6</div>
 							</SectionAnimation>
@@ -62,9 +62,7 @@ export default function ProjectBoard(){
 								<div className="w-full bg-gradient-to-r from-red-500 to-amber-200 shadow-lg px-2 h-16 rounded-lg my-2 text-white text-xl font-bold flex items-center">Certificate - 4 </div>
 							</SectionAnimation>
 
-							<SectionAnimation>
-								<div className="w-full bg-gradient-to-r from-indigo-500 to-teal-200 shadow-lg px-2 h-16 rounded-lg my-2">this is </div>
-							</SectionAnimation>
+							
 						</div>
 					</section>
 

@@ -8,7 +8,7 @@ export default function Nav({setIsMenuOn}){
 
 	return (
 
-		<nav className="bg-slate-800">
+		<nav className="bg-slate-800 fixed left-0 right-0 z-50 border-b-2 border-slate-600">
 			<div className="lg:mx-20 md:mx-10 mx-4  flex itens-center justify-between relative">
 				<div className="name uppercase text-white font-bold text-xl md:flex items-center hidden">
 					PortFolio

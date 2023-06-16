@@ -1,0 +1,116 @@
+:root{
+	--circle-timming : 3s;
+}
+.img{
+	background: url("../image/hero.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position:  top right;
+}
+
+
+
+.brand-name::after{
+	content: "";
+	position: absolute;
+	width: 0rem;
+	height: 0.25rem;
+	background-color: #fe6410;
+	bottom: -0.1rem; left: 0;
+	animation: underline 1s forwards;
+}
+
+
+.upline::after{
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 0.5rem;
+	background-color: #fe6410;
+	top: -0.4rem; left: 0;
+
+}	
+
+.pointer{
+	position: relative;
+	width: 3rem; height: 3rem;
+	border-radius: 50%;
+	background-color: transparent;
+}
+
+.pointer::after{
+	content: "";
+	position: absolute;
+	width: 2rem; height: 2rem;
+	border: white solid 1px;
+	border-radius: 50%;
+	animation: clicking var(--circle-timming) infinite;
+}
+
+.pointer::before{
+	content: "";
+	position: absolute;
+	width: 2rem; height: 2rem;
+	border: white solid 1px;
+	border-radius: 50%;
+	animation:clicking var(--circle-timming) calc(var(--circle-timming) / 3)  infinite;
+}
+
+@keyframes underline {
+  100%{
+  	width: 3.27rem;
+  }
+}
+
+@keyframes clicking {
+  0%{
+  	width: 3rem; height: 3rem;
+  }
+  60%{
+  	opacity: 1;
+  }
+  100%{
+  	opacity: 0;
+  	width: 5rem;
+  	height: 5rem;
+  }
+}
+
+
+@media screen and (max-width: 780px) {
+	 .img-md{
+		background: url("../image/hero.jpg");
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position:  top right;
+	}
+
+	.upline::after{
+		display: none;
+
+	}	
+}
+
+@media screen and (max-width: 480px) {
+	 .pointer::after{
+			width: 1.5rem; height: 1.5rem;
+		}
+
+		.pointer::before{
+			width: 1.5rem; height: 1.5rem;
+		}
+
+		@keyframes clicking {
+		  0%{
+		  	width: 1.5rem; height: 1.5rem;
+		  }
+		  60%{
+		  	opacity: 1;
+		  }
+		  100%{
+		  	opacity: 0;
+		  	width: 3rem;
+		  	height: 3rem;
+		  }
+		}
+}

@@ -8,7 +8,7 @@
 }
 
 html::-webkit-scrollbar {
-  width: 0.5rem;
+  display: none;
 }
 
 html::-webkit-scrollbar-track {
@@ -29,10 +29,19 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  transition: all 0.5s ease-in-out;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+@font-face {
+  font-family: Impact;
+  src: url(./fonts/impact.ttf);
+}
+
+.impact{
+    font-family: "Impact";
+    letter-spacing: 0.5px;
 }

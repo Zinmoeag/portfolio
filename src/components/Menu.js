@@ -2,7 +2,6 @@
 import { faXmark } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {useMydata} from "../providers/MyData.js";
-import profile from "../assets/image/pic/profile.jpg";
 
 
 export default function Menu({setPart,setIsMenuOn,isMenuOn}){
@@ -13,7 +12,8 @@ export default function Menu({setPart,setIsMenuOn,isMenuOn}){
 
 
 	return(
-		<div className={`col-span-2 fixed top-0 md:top-[3.5rem] h-full lg:w-[14rem] md:w-[10rem] bg-white w-full ${!isMenuOn && "translate-x-full"} md:block md:translate-x-0 duration-700 transition-all z-50`}>
+		<div className={`col-span-2 fixed top-0 md:top-[3.5rem] h-full lg:w-[14rem] md:w-[10rem] bg-slate-200 w-full ${!isMenuOn && "translate-x-full"} md:block md:translate-x-0 duration-700 transition-all z-50`}>
+
 
 			<div className="w-full flex flex-col items-center my-5 relative">
 
