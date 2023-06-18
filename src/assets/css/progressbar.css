@@ -1,0 +1,66 @@
+:root{
+	--progress-timming : 1000ms;
+	--spred-timing: 2000ms;
+}
+.main-btn{
+	position: relative;
+	width: 9rem; height: 2.5rem;
+	position: relative;
+}
+
+.main-btn::before{
+	content: "";
+	display: none;
+	border-radius: 1000px;
+	position: absolute;
+	inset: 0;
+	background: #ff9600;
+}
+.main-btn::after{
+	content: "";
+	display: none;
+	border-radius: 1000px;
+	position: absolute;
+	left: 51%;
+	right: 51%;
+	top: 30%;
+	bottom: 30%;
+	background: #060606;
+}
+
+.main-btn.progress{
+	background: transparent;
+	color: transparent;
+	pointer-events: none;
+}
+
+.main-btn.progress::before, .main-btn.progress::after{
+	display: block;
+}
+
+.main-btn.progress::before{
+	animation: progressbar var(--progress-timming) forwards;
+}
+
+.main-btn.progress::after{
+	animation: spread var(--spred-timing) var(--progress-timming) forwards;
+}
+
+@keyframes progressbar {
+	100%{
+		left: -50%;
+		right: -50%;
+		top: 40%;
+		bottom: 40%;
+	}
+}
+
+@keyframes spread {
+	100%{
+		left: -52%;
+		right: -52%;
+		top: 40%;
+		bottom: 40%;
+	}
+}
+

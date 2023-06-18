@@ -34,7 +34,7 @@ export default function Ability(){
 							<div className="flex items-center gap-5 py-2">
 								<FontAwesomeIcon icon={faCheck} className="text-xl text-green-600" />
 								<p className="text-slate-700">
-									I also possess excellent communication skills and can work effectively with clients and team members to understand their requirements and deliver solutions that meet their needs.
+									I also possess excell ent communication skills and can work effectively with clients and team members to understand their requirements and deliver solutions that meet their needs.
 								</p>
 							</div>
 						</div>

@@ -1,0 +1,20 @@
+.hover{
+	position: absolute;
+	background: radial-gradient(rgb(255,234,0,0.8) 20%, rgb(255,150,0,0) 70%);
+	opacity: 0;
+	width: 12rem; height: 12rem;
+	border-radius: 50%;
+	transform: translate(-50%,-50%);
+	pointer-events: none;
+	animation: hover 1s forwards;
+}
+
+.text{
+	pointer-events: none;
+}
+
+@keyframes hover {
+  100%{
+  	opacity: 1;
+  }
+}

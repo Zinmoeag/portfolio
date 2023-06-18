@@ -9,7 +9,6 @@
 }
 
 
-
 .brand-name::after{
 	content: "";
 	position: absolute;
@@ -56,11 +55,13 @@
 	animation:clicking var(--circle-timming) calc(var(--circle-timming) / 3)  infinite;
 }
 
+
 @keyframes underline {
   100%{
   	width: 3.27rem;
   }
 }
+
 
 @keyframes clicking {
   0%{
