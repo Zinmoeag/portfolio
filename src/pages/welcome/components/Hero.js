@@ -1,3 +1,4 @@
+import {useTheme} from "../../../utilites/ThemeProvider.js";
 import React, {useState,useEffect, createRef} from "react";
 import {Link} from "react-router-dom";
 import { faArrowPointer } from '@fortawesome/free-solid-svg-icons';
@@ -11,16 +12,21 @@ import  "../../../assets/css/progressbar.css";
 
 export default function Hero(){
 
-	
+	const {theme} = useTheme();
+
+	// const test = "bg-dark-secondary"
+
+	console.log(theme)
+
 	return (
 		<>
-		<section className="bg-main h-[100vh] relative">
+		<section className="bg-skin-main h-[100vh] relative">
 
 			<div className="back absolute w-[100vw] h-[100%] z-10 hidden lg:block">
 				<div className="grid grid-cols-11">
 					<div className="lg:col-span-9 "></div>
 					<div className="lg:col-span-2 img lg:h-[100vh] lg:block">
-						<div className="black-cover bg-main h-[100%] opacity-70"></div>
+						<div className={`black-cover bg-skin-main h-[100%] opacity-70`}></div>
 					</div>
 				</div>
 			</div>
@@ -30,11 +36,11 @@ export default function Hero(){
 				<SectionAnimation>
 					<div className="grid grid-cols-11 h-[100vh] lg:h-[70vh] pt-20">
 					
-						<div className="lg:col-span-9 col-span-11 flex flex-col lg:gap-[0.8rem] gap-[1rem]  lg:items-center items-start justify-center lg:h-full h-[60vh]  lg:h-full text-fourth xl:text-[1.3rem] lg:text-[1.3rem] md:text-[1.4rem] text-[1rem] font-light px-6 sm:px-10 md:px-20">		
+						<div className={`lg:col-span-9 col-span-11 flex flex-col lg:gap-[0.8rem] gap-[1rem]  lg:items-center items-start justify-center lg:h-full h-[60vh]  lg:h-full text-skin-fourth xl:text-[1.3rem] lg:text-[1.3rem] md:text-[1.4rem] text-[1rem] font-light px-6 sm:px-10 md:px-20`}>		
 								<h3 className="text-fourth impact xl:text-[2.5rem] lg:text-[2.2rem] md:text-[2.2rem] text-[1.5rem]">
-									<span className="text-secondary xl:text-[4.5rem] lg:text-[4rem] md:text-[6rem]  text-[3.3rem] relative me-4 lg:inline block ">Welcome To 
+									<span className="text-skin-secondary xl:text-[4.5rem] lg:text-[4rem] md:text-[6rem]  text-[3.3rem] relative me-4 lg:inline block">Welcome To 
 										<div className="absolute lg:bottom-[-0.8rem] lg:left-[-2.5rem] md:right-[-1.8rem] md:bottom-[0.3rem] right-[-2rem] bottom-[-0.5rem]">
-											<div className="pointer flex items-center justify-center md:text-3xl text-sm  text-fourth">
+											<div className={`pointer flex items-center justify-center md:text-3xl text-sm  text-skin-fourth`}>
 												<FontAwesomeIcon icon={faArrowPointer} />
 											</div>
 										</div>
@@ -43,13 +49,11 @@ export default function Hero(){
 								</h3>
 						
 							<p>My name is Zin Moe Aung, I am excited to share with you <span className="md:hidden">my passion  for Web Development and the work that I have created.</span></p>
-							<p className="text-secondary hidden md:block">my passion  for Web Development and the work that I have created.</p>
+							<p className="text-skin-secondary hidden md:block">my passion  for Web Development and the work that I have created.</p>
 
-							<div className="lg:hidden text-main self-center mt-4">
+							<div className="lg:hidden text-skin-main self-center mt-4">
 								<ProgressBtn to={"/project"} text={"Explore"} />
 							</div>
-							
-
 
 						</div>
 
@@ -57,7 +61,7 @@ export default function Hero(){
 						
 							<div className="w-full h-[100%] flex items-center justify-center img-md relative"> 
 								<IconBox />
-								<div className="black-cover bg-main h-[100%] w-full opacity-70 absolute top-0 left-0 lg:hidden">dd</div>
+								<div className="black-cover bg-skin-main h-[100%] w-full opacity-70 absolute top-0 left-0 lg:hidden"></div>
 							</div>
 						</div>
 					</div>

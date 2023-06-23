@@ -2,45 +2,55 @@ import React from "react";
 import abilityPhoto from "../../../assets/image/ability.png";
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {useTheme} from "../../../utilites/ThemeProvider.js";
+import SectionAnimation from "../../../components/SectionAnimation.js";
 
 export default function Ability(){
 
+	const {theme} = useTheme();
+
 	return (
 		<>
-			<section className="ability md:mx-20 md:h-[80vh]">
+			<section className="ability lg:px-20 relative">
 
-				<div className="md:grid md:grid-cols-5 flex flex-col mt-10 md:px-4 md:mt-none md:p-none place-items-center">
-					<div className="md:col-span-2">
-						<img src={abilityPhoto} className="md:w-[28rem] w-[17rem] mx-auto" alt="" />
+				<div className="lg:grid lg:grid-cols-5 flex flex-col pt-8 md:p-none place-items-center relative z-40 w-fit h-fit">
+					<div className="lg:col-span-2  lg:bg-skin-transparent bg-skin-fourth border-8 lg:border-none border-skin-main overflow-hidden rounded-full lg:rounded-none absolute lg:relative bottom-[-4rem] lg:bottom-0 sm:bottom-[-5rem] left-[50%] lg:left-0 translate-x-[-50%] lg:translate-x-0 z-40">
+						<img src={abilityPhoto} className="w-[8rem] sm:w-[10rem] lg:w-[28rem] mx-auto" alt="" />
 					</div>
 
-					<div className="md:col-span-3 md:px-10 md:py-2 w-[10">
-						<div className="md:p-8 m-3 p-4 rounded-lg shadow-xl border">
-							<div className="flex items-center gap-5 py-2">
-								<FontAwesomeIcon icon={faCheck}  className="text-xl text-green-600" />
-								<p className="text-slate-700">
-								My ability as a web developer stems not just from my technical expertise but also from my problem-solving skills and attention to detail. 
-								</p>
-							</div>
+					<div className="md:col-span-3 lg:px-10 px-4 
+									py-8 relative z-10">
+						<SectionAnimation option="right">
+							<div className="md:p-8 m-3 p-4 py-10 md:py-[4rem] rounded-lg shadow-xl bg-skin-firth/90 ">
+								<div className="flex items-center gap-5 py-2">
+									<FontAwesomeIcon icon={faCheck}  className="text-xl text-skin-third" />
+									<p className="text-skin-fourth">
+									My ability as a web developer stems not just from my technical expertise but also from my problem-solving skills and attention to detail. 
+									</p>
+								</div>
 
-							<div className="flex items-center gap-5 py-2">
-								<FontAwesomeIcon icon={faCheck}  className="text-xl text-green-600"/>
-								<p className="text-slate-700">
-									I have a keen eye for design and user experience and can deliver high-quality web applications that are not only visually appealing but also intuitive and user-friendly.
-								</p>
-							</div>
-							
+								<div className="flex items-center gap-5 py-2">
+									<FontAwesomeIcon icon={faCheck}  className="text-xl text-skin-third" />
+									<p className="text-skin-fourth">
+										I have a keen eye for design and user experience and can deliver high-quality web applications that are not only visually appealing but also intuitive and user-friendly.
+									</p>
+								</div>
+								
 
-							<div className="flex items-center gap-5 py-2">
-								<FontAwesomeIcon icon={faCheck} className="text-xl text-green-600" />
-								<p className="text-slate-700">
-									I also possess excell ent communication skills and can work effectively with clients and team members to understand their requirements and deliver solutions that meet their needs.
-								</p>
+								<div className="flex items-center gap-5 py-2">
+									<FontAwesomeIcon icon={faCheck} className="text-xl text-skin-third" />
+									<p className="text-skin-fourth">
+										I also possess excellent communication skills and can work effectively with clients and team members to understand their requirements and deliver solutions that meet their needs.
+									</p>
+								</div>
 							</div>
-						</div>
-						
+						</SectionAnimation>	
 					</div>
+
+					
 				</div>
+
+				<div className="bg-skin-secondary absolute top-[63%] left-0 w-[100%] h-[7rem] z-10" ></div>
 			</section>
 		</>
 	)

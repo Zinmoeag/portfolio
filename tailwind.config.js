@@ -3,20 +3,25 @@ module.exports = {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
+  plugins: [
+    require("tailwindcss"),
+    require("autoprefixer"),
+    // require("@tailwindcss/ui"),
+  ],
   theme: {
-    extend: {},
-    colors: {
-      'main': '#060606',
-      'third': '#28cdfd',
-      'pink': '#ff49db',
-      'secondary': '#ff9600',
-      'fourth': '#ffffff',
-      'yellow': '#ffc82c',
-      'gray-dark': '#273444',
-      'gray': '#8492a6',
-      'gray-light': '#d3dce6',
+    extend: {
+      colors: {
+        skin:{
+          main: 'rgb(var(--main) / <alpha-value>)',
+          third: 'rgb(var(--third) / <alpha-value>)',
+          secondary: 'rgb(var(--secondary) / <alpha-value>)',
+          fourth: 'rgb(var(--fourth) / <alpha-value>)',
+          firth: 'rgb(var(--firth) / <alpha-value>)',
+          transparent: 'var(--transparent)',
+        },
+      },
     },
   },
-  plugins: [],
 }
+
 

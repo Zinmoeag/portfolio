@@ -1,0 +1,13 @@
+:root {
+	--transitionTimimg : 500ms;
+}
+
+.ball{
+	transition: all var(--transitionTimimg);
+}
+
+.active{
+	color: rgb(var(--fourth));
+	
+}
+

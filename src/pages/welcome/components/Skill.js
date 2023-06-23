@@ -7,7 +7,7 @@ export default function Skill(){
 	
 	return(
 		<>
-		<section className="skill md:mx-20 md:h-[90vh] flex items-center">
+		<section className="skill md:px-20 md:h-[90vh] flex items-center bg-main">
 
 				<div className="grid md:grid-cols-2 mt-10 px-4 md:mt-none md:p-none place-items-center gap-4">
 
