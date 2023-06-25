@@ -1,4 +1,8 @@
-import React from "react";
+import React,{useRef,useEffect} from "react";
+import  TextEditorLike from "../../../components/TextEditorLike.js";
+import { faQuoteLeft } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import  "../../../assets/css/textAnimation.css";
 
 import skillPhoto from "../../../assets/image/skill.jpg";
 
@@ -6,24 +10,23 @@ import skillPhoto from "../../../assets/image/skill.jpg";
 export default function Skill(){
 	
 	return(
-		<>
-		<section className="skill md:px-20 md:h-[90vh] flex items-center bg-main">
+		<> 
+		<section className="skill flex flex-col lg:flex-row items-center my-8 justify-center sm:px-20 py-14 gap-8">
 
-				<div className="grid md:grid-cols-2 mt-10 px-4 md:mt-none md:p-none place-items-center gap-4">
 
-					<div className="content">
-						<p className="text-lg text-slate-600">
-						As a web developer, I possess a wide range of technical skills including proficiency in HTML, CSS, Bootstrap, Tailwind CSS, JavaScript, React, PHP, and Laravel. These skills enable me to build modern and dynamic web applications that meet the needs of my clients. Whether it's developing responsive and visually appealing user interfaces, integrating complex backend functionalities, or optimizing web applications for search engine visibility, I'm well-versed in the latest web development technologies and best practices.
-						</p>
-					</div>
+			<div className="lg:w-[50rem] sm:w-[43rem] w-[22rem]">
+				<TextEditorLike />
+			</div>
+			
 
-					<div>
-						<img src={skillPhoto} className="w-[16rem] md:w-[35rem] hidden md:block" alt="" />
-					</div>
-
+			<div className="sm:px-20 sm:w-[45rem] w-[20rem] lg:mt-0 mt-10 pt-8 relative">
+				<div className='w-fit px-6  py-4 absolute top-[-3rem] left-0 text-skin-sixth'>
+					<FontAwesomeIcon icon={faQuoteLeft} className="text-[2rem]" />
 				</div>
-
-			</section>
+				<h3 className="text-center text-xl text-skin-sixth font-bold">As a web developer, I possess a wide range of technical skills including proficiency in HTML, CSS, Bootstrap, Tailwind CSS, JavaScript, React, PHP, and Laravel.</h3>
+			</div>
+				
+		</section>
 		</>
 	)
 }

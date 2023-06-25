@@ -1,0 +1,4 @@
+.textstroke{
+	 -webkit-text-stroke: 0.03em  rgb(var(--secondary));
+	  -webkit-text-fill-color: rgb(var(--main));
+}

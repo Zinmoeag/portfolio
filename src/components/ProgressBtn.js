@@ -3,8 +3,6 @@ import useRedirect from "../hooks/useRedirect.js";
 import {useTheme} from "../utilites/ThemeProvider.js";
 import Loading from "./Loading.js";
 
-
-
 export default function ProgressBtn({to,text}) {
 
 	const {theme} = useTheme();
@@ -50,7 +48,7 @@ export default function ProgressBtn({to,text}) {
 			<div className="h-[3rem]">
 
 				<div  className="items-center justify-center h-[3rem]" style={display}>
-					<p className="text-skin-fourth text-skin-light">{status}</p>
+					<p className="">{status}</p>
 					<Loading />
 				</div>
 				
@@ -59,11 +57,12 @@ export default function ProgressBtn({to,text}) {
 			
 			<button 
 			type="button" 
-			className={`main-btn bg-skin-secondary text-lg font-bold ${isClicked && "progress"}`}
+			className={`main-btn bg-skin-secondary text-lg font-bold ${isClicked && "progress"} text-skin-fourth  rounded-[5rem]`}
 			onClick ={handleClick}
 			onAnimationEnd={handleRedirect}>
 				{text}
 			</button>
+
 		</div>
 		
 )

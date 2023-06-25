@@ -1,0 +1,16 @@
+.typing-animation{
+	width: 0;
+	border-right: 2px solid rgb(var(--sixth)) ;
+	white-space: nowrap;
+	animation: typing 5s steps(12, end) infinite;
+}
+
+@keyframes typing{
+
+	50%{
+		width: 100px;
+	}
+	100%{
+		width: 0;
+	}
+}

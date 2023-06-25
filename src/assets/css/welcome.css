@@ -41,7 +41,7 @@
 	content: "";
 	position: absolute;
 	width: 2rem; height: 2rem;
-	border: white solid 1px;
+	border: rgb(var(--fourth)) solid 1px;
 	border-radius: 50%;
 	animation: clicking var(--circle-timming) infinite;
 }
@@ -50,7 +50,7 @@
 	content: "";
 	position: absolute;
 	width: 2rem; height: 2rem;
-	border: white solid 1px;
+	border: rgb(var(--fourth)) solid 1px;
 	border-radius: 50%;
 	animation:clicking var(--circle-timming) calc(var(--circle-timming) / 3)  infinite;
 }

@@ -14,7 +14,7 @@
 	border-radius: 1000px;
 	position: absolute;
 	inset: 0;
-	background: #ff9600;
+	background: rgb(var(--secondary));
 }
 .main-btn::after{
 	content: "";
@@ -25,7 +25,7 @@
 	right: 51%;
 	top: 30%;
 	bottom: 30%;
-	background: #060606;
+	background: rgb(var(--main));
 }
 
 .main-btn.progress{

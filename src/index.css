@@ -5,20 +5,27 @@
 
 @layer base {
   :root{
-    --main: 6 6 6;
+    --main: 22 22 22;
     --secondary: 255 150 0;
-    --third: 40 205 253;
+    --third: 6 6 6;
     --fourth: 255 255 255;
     --firth: 14 18 24;
+    --sixth : 108 108 108;
+    --cover: 1 18 31;
+    --true : 6 148 22;
     --transparent : transparent;
   }
   .light{
-    --main: 30 36 60;
-    --secondary: 255 150 0;
-    --third: 40 205 253;
-    --fourth: 255 255 255;
-    --firth: 14 18 24;
+    --main: 223 233 240;
+    --secondary: 240 89 69;
+    --third: 73 51 35;
+    --fourth: 43 43 43;
+    --firth: 255 255 255;
+    --sixth : 129 147 147;
+    --cover: 1 18 31;
+    --true : 6 148 22;
     --transparent : transparent;
+
   }
 }
 
@@ -67,3 +74,15 @@ code {
     font-family: "Impact";
     letter-spacing: 0.5px;
 }
+
+@font-face {
+  font-family: Universal;
+  src: url(./fonts/cambriab.ttf);
+}
+
+.cambria{
+    font-family: "Universal";
+    letter-spacing: 0.5px;
+}
+
+

@@ -9,7 +9,7 @@ export default function IconBox(){
 
 	return (
 		<>
-			<div className="icon-box bg-skin-fourth flex lg:flex-col lg:gap-[3rem] md:gap-[5rem] gap-[3rem] p-3 w-fit rounded-[20rem] h-fit z-40 text-skin-main">
+			<div className="icon-box bg-skin-fourth flex lg:flex-col justify-between content-between lg:gap-[4rem] md:gap-[5rem] gap-[3rem] p-3 w-fit rounded-[20rem] h-fit z-40 text-skin-main">
 				<BounceAnimatedBtn>
 					<FontAwesomeIcon icon={faGithub} className="lg:text-[2.5rem] md:text-[3.5rem]  text-[2rem]" />
 				</BounceAnimatedBtn>

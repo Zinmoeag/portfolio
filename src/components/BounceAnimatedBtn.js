@@ -22,7 +22,7 @@ export default function BounceAnimationBtn({children}){
 			onMouseEnter={handleEnter} 
 			onMouseLeave={handleLeave}
 			>
-			<div className={`${isEnter && "animate__bounceIn"} cursor-pointer`}>
+			<div className={`${isEnter && "animate__bounceIn"} cursor-pointer text-xl`}>
 				{children}
 			</div>
 		</div>

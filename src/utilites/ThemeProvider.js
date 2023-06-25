@@ -1,10 +1,16 @@
-import {React, useState, createContext, useContext} from 'react';
+import {React, useState, createContext, useContext, useEffect} from 'react';
 
 const ThemeContext = createContext();
 
 export function ThemeProvider({children}){
 
-	const [theme,setTheme] = useState('dark');
+	//checking localStorage theme key is existed or not, set theme conditionally
+	const [theme,setTheme] = useState(() => localStorage.getItem('theme') || 'dark');
+
+
+	useEffect(() => {
+		localStorage.setItem("theme", theme);
+	},[theme])
 
 
 	return (

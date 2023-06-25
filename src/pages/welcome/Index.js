@@ -28,7 +28,7 @@ export default function Home(){
 			<Nav />
 			<Hero />
 			<Ability />
-			<ContactSection />
+			<Skill />
 		</div>
 	
 
