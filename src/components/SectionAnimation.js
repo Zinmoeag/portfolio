@@ -1,37 +1,18 @@
 import React,{useRef, useEffect, useState} from "react";
 import animation from "../assets/css/intersectionAnimation.css";
+import WithIntersection from "../utilites/WithIntersection.js"
 
-export default function SectionAnimation({children,option = "left"}){
-	const [isVisible, setIsVisible] = useState(false);
+function AnimationComponent ({children,option = "left", isVisible}){
+
 	const [direction, setDirection] = useState(option);
-	const targetRef = useRef(null);
-
-	useEffect(() => {
-		const Observer = new IntersectionObserver(entries => {
-			entries.forEach(entry => {
-				if(entry.isIntersecting){
-					setIsVisible(true);
-				}else{
-					setIsVisible(false)
-				}
-			})
-		});
-
-
-		Observer.observe(targetRef.current);
-
-		return () => {
-			Observer.disconnect();
-		}
-
-	},[]);
-
 
 	return(
-		<section ref={targetRef} className={`overflow-hidden ${isVisible ? `${direction}Animate` : ""}`} >
+		<section  className={`overflow-hidden ${isVisible ? `${direction}Animate` : ""}`} >
 			{children}
 		</section>
 	)
-
-
 }
+
+const SectionAnimation = WithIntersection(AnimationComponent);
+
+export default SectionAnimation;

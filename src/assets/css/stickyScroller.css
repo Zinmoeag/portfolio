@@ -1,0 +1,15 @@
+.fixed-bar{
+	position: relative;
+	animation: fixed 500ms forwards;
+}
+
+@keyframes fixed{
+	0%{
+		position: fixed;
+		top: 0rem;
+	}
+	100%{
+		position: fixed;
+		top: 4rem;
+	}
+}

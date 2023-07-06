@@ -47,12 +47,8 @@ export default function BlogContainer(){
 	return(
 
 		<>
-		<div className="flex justify-between items-center">
-			<h3 className="text-lg font-semibold text-slate-500 mx-4 my-4 border-b-2 border-slate-400">The Work That I Created - {allpages}</h3>
-			<DropDown />
-		</div>
 		
-		<div className="card-container lg:mx-4 my-4 grid grid-cols-1 md:grid-cols-2 mx-4 md:mx-none lg:gap-8 md:gap-4">
+		<div className="card-container grid grid-cols-1 md:grid-cols-2  md:mx-none lg:gap-12 md:gap-6 lg:px-6">
 			{paginatedPage && paginatedPage.map((d,i) => {
 				return(
 					<Card key={d.id} name={d.name} link={d.github} feature={d.feature} category={d.category} setCategory={setCategory} img={d.img ? require(`../assets/image/project/${d.img}`) : "https://img.freepik.com/free-vector/cartoon-web-design-landing-page_52683-70880.jpg"} key={i} />

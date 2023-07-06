@@ -37,13 +37,10 @@ export default function Hero(){
 							className="col-span-11 mx-4 text-skin-secondary flex items-center justify-center
 										lg:col-span-9"
 						>
-
 							<HeroText />
 
 						</div>
 						
-
-
 						<div className="lg:col-span-2 col-span-11 lg:h-full h-[30vh]  flex md:flex-col gap-4 items-center justify-center relative">
 						
 							<div className="w-full h-full flex items-center justify-center img-md relative"> 
@@ -56,7 +53,7 @@ export default function Hero(){
 				
 
 				<div className="button h-[30%] lg:flex items-center justify-center hidden text-skin-fourth">
-					<ProgressBtn to={"/project"} text={"Explore"} />	
+					<ProgressBtn to={"/home"} text={"Explore"} />	
 				</div>
 
 			</div>

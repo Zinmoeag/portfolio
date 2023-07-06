@@ -5,14 +5,17 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
 import {ThemeProvider} from "./utilites/ThemeProvider"
+import ProjectData from "./providers/ProjectData.js"
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
       <ThemeProvider>
-        <BrowserRouter>
-          <App />
-        </BrowserRouter>
+        <ProjectData> 
+          <BrowserRouter>
+            <App />
+          </BrowserRouter>
+        </ProjectData>
       </ThemeProvider>
   </React.StrictMode>
 );

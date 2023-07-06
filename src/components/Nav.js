@@ -1,37 +1,29 @@
-import { faMagnifyingGlass,faHouse,faBars  } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {Link} from "react-router-dom";
-import Searcher from "../components/Searcher.js";
-
-export default function Nav({setIsMenuOn}){
+import { Link } from "react-router-dom";
+import  "../assets/css/welcome.css";
+import {useTheme} from "../utilites/ThemeProvider.js";
+import  ThemeToggler from "../components/ThemeToggler.js";
 
 
+export default function Nav(){
+
+	const {theme,setTheme} = useTheme();
+	
 	return (
 
-		<nav className="bg-slate-800 fixed left-0 right-0 z-50 border-b-2 border-slate-600">
-			<div className="lg:mx-20 md:mx-10 mx-4  flex itens-center justify-between relative">
-				<div className="name uppercase text-white font-bold text-xl md:flex items-center hidden">
-					PortFolio
-				</div>
+		<div className="bg-skin-firth border-b-2 border-skin-firth lg:px-20 md:px-10 px-5 fixed top-0 left-0 right-0 z-50 shadow-lg">
+			<div className=" h-[4rem]  flex items-center justify-between">
 
-				<Searcher />
-
-				<div className="icon-box flex gap-4 items-center text-white">
+				<div className="brand-name relative">
 					<Link to="/">
-						<button type="button" className="hover:text-slate-400">
-							<FontAwesomeIcon icon={faHouse} />
-						</button>
+						<h3 className="text-skin-fourth font-light impact text-2xl">Portfolio</h3>
 					</Link>
-
-
-					<button type="button" className="md:hidden" onClick={e => setIsMenuOn(true)}>
-						<FontAwesomeIcon icon={faBars} />
-					</button>
-					
 				</div>
-
+			
+				<div>
+					<ThemeToggler />
+				</div>
 			</div>
-		</nav>
-		
+		</div>
+
 	)
 }

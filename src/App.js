@@ -1,7 +1,8 @@
 import { Route, Routes } from "react-router-dom";
 import {useTheme} from "./utilites/ThemeProvider"
 import Welcome from "./pages/welcome/Index.js";
-import ProjectBoard from "./pages/ProjectBoard.js";
+import Home from "./pages/home/index.js"
+// import ProjectBoard from "./pages/ProjectBoard.js";
 
 
 
@@ -16,7 +17,7 @@ function App() {
         
          <Routes>
             <Route path="/" element={<Welcome />}></Route>
-            <Route path="/project" element={<ProjectBoard />}></Route>
+            <Route path="/home" element={<Home />}></Route>
         </Routes>
      
       </div>

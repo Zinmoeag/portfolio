@@ -33,7 +33,7 @@ export default function Herotext(){
 				<p>I am excited to share with you my passion for Web Development and the work that I have created.</p>
 			</div>
 			<div className="button h-[30%] lg:flex items-center justify-center lg:hidden text-[0.8em] mt-8 md:mt-20 text-skin-sixth">
-				<ProgressBtn to={"/project"} text={"Explore"} />	
+				<ProgressBtn to={"/home"} text={"Explore"} />	
 			</div>
 		</div>
 	)

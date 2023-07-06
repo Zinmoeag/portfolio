@@ -9,7 +9,7 @@
     --secondary: 255 150 0;
     --third: 6 6 6;
     --fourth: 255 255 255;
-    --firth: 14 18 24;
+    --firth: 28 28 35;
     --sixth : 108 108 108;
     --cover: 1 18 31;
     --true : 6 148 22;
@@ -18,7 +18,7 @@
   .light{
     --main: 223 233 240;
     --secondary: 240 89 69;
-    --third: 73 51 35;
+    --third: 0 28 48;
     --fourth: 43 43 43;
     --firth: 255 255 255;
     --sixth : 129 147 147;
@@ -36,6 +36,8 @@
     color: #f8dec3;
 }
 
+
+
 html::-webkit-scrollbar {
   display: none;
 }
@@ -48,6 +50,11 @@ html::-webkit-scrollbar-thumb {
   border-radius: 10px;
   background: #1b313f;
   height: 1rem;
+}
+
+.noscrollbar::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; /* make scrollbar transparent */
 }
 
 body {
@@ -84,5 +91,6 @@ code {
     font-family: "Universal";
     letter-spacing: 0.5px;
 }
+
 
 

@@ -18,7 +18,7 @@ const CategoryBtns = ({category,setCategory}) => {
 
 const FeatureList = ({feature}) => {
 	return(
-		<div className="mt-4">
+		<div className="mt-4 text-skin-fourth">
 			<ul>
 				{feature.map((f,i) => {
 					return( 
@@ -30,31 +30,36 @@ const FeatureList = ({feature}) => {
 	)
 }
 
-export default function Card({name,link,img,feature,category,setCategory,themeColor="light"}){
-
-	const [theme,setTheme] = useState(themeColor);
+export default function Card({name,link,img,feature,category,setCategory}){
 
 	return(
-			<div className={`card rounded-lg shadow-xl my-4 md:my-none ${theme ==="dark" && "bg-blue-950" }`}>
-				<div className="image h-[13rem] overflow-hidden object-cover">
-					<img src={img} className="object-cover w-full h-full" alt="" />
+			<div className="card rounded-lg my-4 md:my-none relative h-[27rem]">
+				<div className="image h-[12rem] w-full overflow-hidden object-cover px-4 absolute top-0 z-10">
+					<img src={img} className="object-cover w-full h-full rounded-lg shadow-lg" alt="" />
 				</div>
 
-				<div className="content px-4  py-4">
-					<h3 className={`text-center text-2xl font-semibold mb-2 ${theme ==="dark" && "text-white"}`}>{ name.toUpperCase() }</h3>
+				<div className="content pt-20 bg-skin-firth h-[19rem] overflow-hidden shadow-md rounded-xl relative top-[8rem]">
 					
+					<div className="bg-skin-secondary py-1 mb-2">
+						<h3 className="text-center text-xl font-semibold text-skin-main">{ name.toUpperCase() }</h3>
+					</div>
 
-					{category && <CategoryBtns category={category} setCategory={setCategory} />}
+					<div className="px-4 text-skin-fourth">
+						{category && <CategoryBtns category={category} setCategory={setCategory} />}
+						
+						{/*{feature && <FeatureList feature={feature} />}*/}
+
+						<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi cupiditate molestiae soluta repudiandae quam inventore deleniti. Ipsam laborum perferendis laboriosam, illum! Ea autem, velit minima vero illum, dolor quisquam hic! </p>
+					</div>
 					
-					{feature && <FeatureList feature={feature} />}
-					
-					<div className="flex justify-end">
+					<div className="flex justify-end bg-gradient-to-b from-skin-transparent to-skin-firth to-30% pt-[0.5rem] px-4 h-[3rem] w-[100%] text-skin-secondary font-bold absolute bottom-0">
 						<button type="button">
 							<a href={link} target="_blank">
-								<h4 className="text-blue-400">Go to Link</h4>
+								<h4 className="">More</h4>
 							</a>
 						</button>
 					</div>	
+
 				</div>
 
 				
