@@ -1,17 +1,16 @@
 import {useState,useEffect} from "react";
-import useRedirect from "../hooks/useRedirect.js";
+// import useRedirect from "../hooks/useRedirect.js";
 import {useTheme} from "../utilites/ThemeProvider.js";
 import Loading from "./Loading.js";
+import {useNavigate} from "react-router-dom"
 
 export default function ProgressBtn({to,text}) {
 
 	const {theme} = useTheme();
 	const [isClicked, setIsClicked] = useState(false);
 	const [isFinish, setIsFinish] = useState(false);
-	const [uri,setUri] = useState(null);
 	const [status, setStatus] = useState("Loading");
-
-	useRedirect(uri);
+	const navigate = useNavigate()
 
 	let AnimationCount = 0;
 
@@ -32,7 +31,7 @@ export default function ProgressBtn({to,text}) {
 
 		if(AnimationCount > 0){
 			setIsFinish(true)
-			setUri(to)
+			navigate("/home")
 		}
 		AnimationCount++;
 	}

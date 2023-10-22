@@ -1,60 +1,62 @@
-import {useState,useContext} from "react";
-import {useProjectData} from "../providers/ProjectData.js";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {useState, useEffect} from 'react'
+import {Link} from 'react-router-dom'
+import {faAngleDown } from '@fortawesome/free-solid-svg-icons';
+
+const DropDown = ({name,data}) => {
+	const [toggle, setToggle] = useState(false);
+
+	useEffect(() => {
+		setToggle(false)
+	},[])
 
 
-export default function DropDown(){
-	const [isOn, setIsOn] = useState(false);
-	const {category,setCategory} = useProjectData();
-	const categoryList = [
-		"frontend","backend","api"
-	];
-
-	const dropdownToggle = () => {
-		setIsOn(!isOn);
-	}
-
-	const handleCategory =(e) => {
-		e.preventDefault();
-		e.stopPropagation();
-		setIsOn(false);
-		setCategory(e.target.value);
-	}
-
-	return(
-
+	return (
 		<>
-		<div className="me-4 relative"> 
-					<button type="button" className="bg-skin-transparent text-skin-fourth  uppercase text-xl  w-[10rem] border-b-2 border-skin-secondary" onClick={dropdownToggle}>{category}</button>
-					<ul className={`absolute left-0 top-12 bg-skin-main/70 w-60 shadow-xl  text-skin-fourth backdrop-blur-sm ${!isOn ? "hidden" :  ""} z-30`}>
-						<li className="border-b-2 border-skin-secondary">
-							<button type="button" className="w-[100%] text-start hover:bg-skin-third/20 py-2 ps-2" onClick={handleCategory} value="all">all</button>
+			<div className="relative">
+				<button 
+					className=" w-[8rem] text-md bg-white text-slate-900 border-[0.01rem] border-slate-600 outline-none py-1 flex justify-between px-4 hover:text-skin-secondary items-center"
+					onClick = {() => {setToggle(prev => !prev)}}
+				>
+					{name}
+					<FontAwesomeIcon
+						className="" 
+						icon={faAngleDown}
+					/>
+				</button>
+
+				
+				<ul className={`${toggle ? 'h-fit' : "h-[0rem]"} bg-white flex flex-col gap-2 text-slate-900 overflow-hidden transition-all duration-500 absolute w-full z-40`}>
+					{data && data.map((item,i) => (
+
+						<li  className="hover:bg-skin-secondary w-full px-2 " key={item.id}>
+							{item.link && (
+								<button
+								key={i} 
+								type="button"
+								onClick={item.click}
+								>{item.name}
+								</button>
+							)}
+
+
+							{item.button && (
+								<button
+									key={i}
+									onClick={item.button}
+								>
+								{item.name}
+								</button>
+							)}
 						</li>
-					
-						{categoryList.map((item, i) => {
-							return(
-								<li className="border-b-2 border-skin-secondary" key={i} >
-									<button type="button" className="w-[100%] text-start hover:bg-skin-third/20 py-2 ps-2" onClick={handleCategory} value={item}>{item}</button>
-								</li>
-							)
-						})}
-						
-					</ul>
-				</div>
-			
 
+					))}
+				</ul>
+
+			</div>
 		</>
-
-		
-
-		
-
 	)
 }
 
 
-
-
-							
-
-							
-						
+export default DropDown;

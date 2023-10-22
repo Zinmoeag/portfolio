@@ -11,7 +11,7 @@ export default function Ability(){
 
 	return (
 		<>
-			<section className="ability lg:px-20 relative bg-skin-firth lg:bg-skin-transparent">
+			<section className="ability lg:px-20 relative bg-skin-firth lg:bg-skin-transparent relative z-10">
 
 				<div className="lg:grid lg:grid-cols-5 flex flex-col pt-8 md:p-none place-items-center relative z-40 w-fit h-fit">
 					<div className="lg:col-span-2  lg:bg-skin-transparent bg-skin-fourth border-8 lg:border-none border-skin-main overflow-hidden rounded-full lg:rounded-none absolute lg:relative bottom-[-4rem] lg:bottom-0 sm:bottom-[-5rem] left-[50%] lg:left-0 translate-x-[-50%] lg:translate-x-0 z-40">

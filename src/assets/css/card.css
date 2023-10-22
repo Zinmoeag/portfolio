@@ -1,0 +1,20 @@
+.card{
+	opacity: 0;
+	transform: translateY(-30%);
+	animation: cardappear calc(var(--delay) * 500ms) forwards;
+}
+
+.card:nth-child(1){--delay : 1}
+.card:nth-child(2){--delay : 2}
+.card:nth-child(3){--delay : 3}
+.card:nth-child(4){--delay : 4}
+.card:nth-child(5){--delay : 5}
+.card:nth-child(6){--delay : 6}
+
+
+@keyframes cardappear{
+	100%{
+		opacity:1;
+		transform: translateY(0);
+	}
+}

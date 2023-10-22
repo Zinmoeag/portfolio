@@ -1,14 +1,20 @@
 import {useState,useEffect,useRef} from "react";
 import { faMagnifyingGlass,faHouse,faBars  } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import useCurrentUri from '../hooks/useCurrentUri.js'
 
 
 export default function SearchBox(){
 
 	const [search,setSearch] = useState("");
+	const {currentUri, setQueryParams} = useCurrentUri();
 
 	const Search =(e) => {
 		e.preventDefault();
+		setQueryParams({
+			search : search,
+			page : 1
+		})
 	}
 
 

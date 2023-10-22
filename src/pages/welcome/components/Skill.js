@@ -9,7 +9,7 @@ export default function Skill(){
 	
 	return(
 		<> 
-		<section className="skill flex flex-col lg:flex-row items-center my-8 justify-center sm:px-20 py-14 gap-8">
+		<section className="skill flex flex-col lg:flex-row items-center my-8 justify-center sm:px-20 py-14 gap-8 relative z-10">
 
 
 			<div className="lg:w-[50rem] sm:w-[43rem] w-[22rem]">

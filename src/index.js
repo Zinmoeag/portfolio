@@ -5,18 +5,25 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
 import {ThemeProvider} from "./utilites/ThemeProvider"
-import ProjectData from "./providers/ProjectData.js"
+import ProjectData from './providers/ProjectData.js'
+import {Provider} from 'react-redux'
+import store from './redux/store.js'
+import {AppStateProvider} from './utilites/AppStateContext.js'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-      <ThemeProvider>
-        <ProjectData> 
-          <BrowserRouter>
-            <App />
-          </BrowserRouter>
-        </ProjectData>
-      </ThemeProvider>
+      <BrowserRouter>
+        <Provider store={store}>
+          <ProjectData>
+            <ThemeProvider>
+              <AppStateProvider>
+                  <App />
+              </AppStateProvider>
+            </ThemeProvider>
+          </ProjectData>
+        </Provider>
+      </BrowserRouter>
   </React.StrictMode>
 );
 

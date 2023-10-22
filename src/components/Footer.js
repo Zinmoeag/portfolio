@@ -1,12 +1,13 @@
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import "../../../assets/css/footer.css";
-import LinkGroup from "../../../components/LinkGroup.js";
+import "../assets/css/footer.css";
+import LinkGroup from "./LinkGroup.js";
+import {Link} from 'react-router-dom'
 
 export default function Footer () {
 	return (
-		<div className="bg-skin-third footer lg:h-[20rem] md:h-[30rem] h-[40rem] relative mt-8">
-			<div className="bg-skin-cover/80 h-full"></div>
+		<div className="footer lg:h-[20rem] md:h-[30rem] h-[40rem] relative mt-8">
+			<div className="bg-slate-900/90 h-full"></div>
 			<div className="content">
 				<div className="absolute top-0 w-full text-slate-50 h-full lg:px-20 md:px-10 px-5 flex items-center ">
 					<div className="flex md:flex-row flex-col md:items-center justify-between w-full gap-10">
@@ -16,8 +17,16 @@ export default function Footer () {
 								<h3 className="text-xl uppercase font-bold">Navigator</h3>
 								<div className="mt-2">
 									<ul className="border-skin-secondary border-s-2 border-dashed ps-4">
-										<li className="hover:ps-2 ease-in duration-200 cursor-pointer w-fit">Blogs</li>
-										<li className="hover:ps-2 ease-in duration-200 cursor-pointer w-fit">Projects</li>
+										<li className="hover:ps-2 ease-in duration-200 cursor-pointer w-fit">
+											<Link to="/">
+												Welcome
+											</Link>
+										</li>
+										<li className="hover:ps-2 ease-in duration-200 cursor-pointer w-fit">
+											<Link to="/home">
+												home
+											</Link>
+										</li>
 									</ul>
 								</div>
 							</div>

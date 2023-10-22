@@ -5,7 +5,7 @@ const ThemeContext = createContext();
 export function ThemeProvider({children}){
 
 	//checking localStorage theme key is existed or not, set theme conditionally
-	const [theme,setTheme] = useState(() => localStorage.getItem('theme') || 'dark');
+	const [theme,setTheme] = useState(() => localStorage.getItem('theme') || 'light');
 
 
 	useEffect(() => {

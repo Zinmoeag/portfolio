@@ -1,5 +1,5 @@
 import {useTheme} from "../../../utilites/ThemeProvider.js";
-import React, {useState,useEffect, createRef} from "react";
+import React, {useState,useEffect, createRef, useCallback} from "react";
 import {Link} from "react-router-dom";
 import { faArrowPointer } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -9,6 +9,7 @@ import SectionAnimation from "../../../components/SectionAnimation.js";
 import  "../../../assets/css/progressbar.css";
 import  "../../../assets/css/herotext.css";
 import HeroText from "./Herotext.js";
+import ParticlesComponent from '../../../components/Particles.js'
 
 
 export default function Hero(){
@@ -16,9 +17,12 @@ export default function Hero(){
 	const {theme} = useTheme();
 
 	return (
-		<>
-		<section className="bg-skin-main h-fit relative">
 
+		<>
+		<section className="h-fit relative overflow-hidden">
+			<div className='relative z-0'>
+				<ParticlesComponent />
+			</div>
 			<div className="back absolute w-[100vw] h-[100vh] z-10 hidden lg:block">
 				<div className="grid grid-cols-11">
 					<div className="lg:col-span-9 "></div>
