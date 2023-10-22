@@ -1,9 +1,7 @@
-import Nav from "../../components/Nav.js";
 import Searcher from "./components/Searcher.js";
 import TagContainer from "../../components/TagContainer.js";
 import BlogContainer from "../../components/BlogContainer.js";
 import Footer from "../../components/Footer.js";
-import DropDown from "../../components/DropDown.js";
 
 export default function Home(){
 	return(

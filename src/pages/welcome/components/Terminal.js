@@ -9,15 +9,15 @@ import {useSelector} from 'react-redux'
 const Terminal = () => {
 
 	const projects = useSelector(state => state.projects)
-	const tools = Object.keys(useSelector(state => state.tools))
+	const tools = Object.values(useSelector(state => state.tools))
 	const state = {projects,tools}
 
 	const [step, setStep] = useState(state);
 	const TerminalRef = useRef(null);
 	const [data, setData] = useState(null);
-	const [page, setPage] = useState('');
-	const [error, setError] = useState(null)
-	const [id, setId] = useState(null)
+	const page = '';
+	const error = null;
+
 	const [terminal, setTerminal] = useState("")
 
 	const terminalHandler = (argument) => {
@@ -147,7 +147,6 @@ const Terminal = () => {
 					 	/>
 					 </div>
 
-					 {error && <p>> {error}</p>}
 				</div>
 			</div>
 

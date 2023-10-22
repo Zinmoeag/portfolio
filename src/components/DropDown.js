@@ -1,6 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {useState, useEffect} from 'react'
-import {Link} from 'react-router-dom'
 import {faAngleDown } from '@fortawesome/free-solid-svg-icons';
 
 const DropDown = ({name,data}) => {

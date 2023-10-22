@@ -1,11 +1,9 @@
-import {useContext,useState, useEffect} from "react";
 import Card from "../components/Card.js";
 import DropDown from "../components/DropDown.js";
 import useCurrentUri from '../hooks/useCurrentUri.js'
 import useScroll from '../hooks/useScrollTop.js'
 import "../assets/css/card.css";
 import {useProjectData} from '../providers/ProjectData.js'
-import {useSelector} from 'react-redux'
 import {Link} from 'react-router-dom'
 
 
@@ -37,13 +35,11 @@ function PaginateBtn ({paginateBtn,setPageNo, setQueryParams}) {
 
 export default function BlogContainer(){
 
-	const projects = useSelector(state => state.projects);
-
 	const {search,page,category,setQueryParams} = useCurrentUri();
 	const {data,setFilter} = useProjectData();
 
 	useScroll([search,page,category],300)
-	const {paginatedPage,pages,allpages} = data;
+	const {paginatedPage,pages} = data;
 
 	const paginateBtn = [];
 

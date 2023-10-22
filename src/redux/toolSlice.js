@@ -1,5 +1,4 @@
 import { createSlice } from '@reduxjs/toolkit'
-import {project} from '../data/ProjectData.js'
 import {tool} from '../data/ToolData.js'
 
 
