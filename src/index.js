@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter } from 'react-router-dom';
+import {  HashRouter } from 'react-router-dom';
 import {ThemeProvider} from "./utilites/ThemeProvider"
 import ProjectData from './providers/ProjectData.js'
 import {Provider} from 'react-redux'
@@ -13,7 +13,7 @@ import {AppStateProvider} from './utilites/AppStateContext.js'
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-      <BrowserRouter>
+      <HashRouter>
         <Provider store={store}>
           <ProjectData>
             <ThemeProvider>
@@ -23,7 +23,7 @@ root.render(
             </ThemeProvider>
           </ProjectData>
         </Provider>
-      </BrowserRouter>
+      </HashRouter>
   </React.StrictMode>
 );
 

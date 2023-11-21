@@ -9,13 +9,10 @@ import './assets/css/pageTransition.css'
 import {useLocation} from 'react-router-dom'
 import { AnimatePresence } from 'framer-motion';
 
-// const Welcome = lazy(() => import("./pages/welcome/Index.js"))
-// const Home =  lazy(() => import("././pages/home/index.js"));
-// const Show = lazy(() =>import("./pages/show/Show.js"));
 
   
 function App() {
-  console.clear()
+  // console.clear()
   const {theme} = useTheme();
   const location = useLocation();
 

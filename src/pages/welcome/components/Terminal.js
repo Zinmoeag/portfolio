@@ -2,21 +2,22 @@ import { faHandPointRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {useRef, useEffect} from 'react'
 import TerminalContent from './TerminalContent.js'
-import {useState} from 'react'
+import {useState,useMemo} from 'react'
 import {useSelector} from 'react-redux'
 
 
 const Terminal = () => {
 
 	const projects = useSelector(state => state.projects)
-	const tools = Object.values(useSelector(state => state.tools))
-	const state = {projects,tools}
+	const tools = Object.keys(useSelector(state => state.tools))
+	const state = useMemo(() => ({projects,tools}),[projects,tools])
 
 	const [step, setStep] = useState(state);
 	const TerminalRef = useRef(null);
 	const [data, setData] = useState(null);
-	const page = '';
-	const error = null;
+	const [id, setId] = useState(null);
+	const [page,setPage] = useState("");
+	const [error, setError] = useState(null);
 
 	const [terminal, setTerminal] = useState("")
 
@@ -86,7 +87,7 @@ const Terminal = () => {
 			setStep(state)
 			setData(null)
 		}
-	},[terminal, step])
+	},[terminal, step, state])
 
 
 	const handleSubmit = (e) => {

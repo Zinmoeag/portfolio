@@ -7,6 +7,11 @@ import  ThemeToggler from "../components/ThemeToggler.js";
 export default function Nav(){
 
 	const {theme,setTheme} = useTheme();
+
+	const handleDownladFile = () => {
+		const file = process.env.PUBLIC_URL + "/cv.pdf";
+		window.open(file, '_blank');
+	}
 	
 	return (
 
@@ -19,7 +24,13 @@ export default function Nav(){
 					</Link>
 				</div>
 			
-				<div>
+				<div className="flex flex-row gap-4 items-center justify-center">
+					<button
+					onClick={handleDownladFile}
+					className="bg-skin-secondary py-2 px-4 rounded-full text-white"
+					>
+					Download CV
+					</button>
 					<ThemeToggler />
 				</div>
 			</div>
