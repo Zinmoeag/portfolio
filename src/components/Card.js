@@ -8,6 +8,12 @@ import useCurrentUri from '../hooks/useCurrentUri.js'
 const CategoryBtns = ({category}) => {
 	const {setQueryParams} = useCurrentUri();
 
+	const handleCategoryQuery = (e,c) => {
+		e.stopPropagation();
+		e.preventDefault();
+		setQueryParams({category: c})
+	}
+
 	return(
 		<div className="flex justify-center gap-2">
 			{category.map((c,i) => {
@@ -15,7 +21,7 @@ const CategoryBtns = ({category}) => {
 					<button 
 					className="bg-slate-700 rounded-sm px-4 text-white hover:bg-blue-800" 
 					key={i} 
-					onClick={e => setQueryParams({category: c})}
+					onClick={e => handleCategoryQuery(e,c)}
 					>{c}</button>
 				)
 			})}
