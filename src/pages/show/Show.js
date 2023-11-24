@@ -13,6 +13,7 @@ const Show = () => {
 	const {slug} = useParams()
 	const projects = useSelector(state => state.projects);
 	const data = projects[slug];
+
 	const {setShowImageDisplay} = useAppStateContext();
 
 	const handleDisplayImage = (e) => {

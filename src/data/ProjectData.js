@@ -197,6 +197,37 @@ const project = {
 		description : `This project is Laracamp's take-home project. We developed this app as a team of four members. We decided to use Laravel for the backend and React for the frontend. My main role for this project is frontend development with React. Occasionally, I assist my team with backend tasks. We chose React for its ability to avoid page refresh and its capability to fetch data with JavaScript.
 						This application is e-commerce website`
 	},
+	zodiac:{
+		id:6,
+		name:"Zodiac",	
+		slug:'zodiac',
+		github:"https://github.com/Zinmoeag/zodiac",
+		img:"zodiac/home.png",
+		feature:[
+			{
+				id:1,
+				name: "Zodiacs",
+				description : `In the ever-expanding realm of digital applications, a novel feature has emerged that allows users to delve into the intriguing world of astrology. This innovative addition empowers users to explore and understand the behavior and mannerisms associated with each zodiac sign. By simply clicking on a specific sign, users can unlock a wealth of information that provides insights into the distinctive characteristics and traits of individuals born under that sign`,
+				img : "zodiac/home.png",
+			},
+			{
+				id:2,
+				name: "Sharmal",
+				description : `Embark on a personalized astrological journey with the groundbreaking feature "Sharmal Search." Designed to make astrology accessible to everyone, this innovative tool allows users to uncover the mysteries of their zodiac sign by simply typing in their birth date. Named "Sharmal" for its seamless blend of simplicity and astrological depth, this feature promises a quick and insightful way to explore individual characteristics based on celestial alignments.`, 				
+				img : "zodiac/sharmal.png",
+			},
+			{
+				id:3,
+				name: "Mr Zodiac",
+				description : "This unique feature not only uncovers your zodiac-related behavior and manner but also provides an interactive personality assessment with a progress bar which is depended on the percentage of your personality.",
+				img : "zodiac/content.png",
+			},
+		],
+		category:[
+				"frontend",
+		],
+		description : `Zodiac ia a mini projects.In this project you can read the behaviour, habit and something like that of each zodiac sign, You can also searh your zodiac sign with your birth date. Only Myanmar Language is supported. So that user can read easily. This application also provided chinese zodiac`
+	},
 }
 
 export default project
