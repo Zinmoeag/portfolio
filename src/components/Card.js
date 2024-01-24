@@ -1,6 +1,5 @@
 import {useState} from "react";
-import {Link} from "react-router-dom";
-import { faArrowUpRightFromSquare,faCheck,faQuoteLeft,faEnvelope,faLocationDot } from '@fortawesome/free-solid-svg-icons';
+import { faFilm, faCheck } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import useCurrentUri from '../hooks/useCurrentUri.js'
 
@@ -43,31 +42,55 @@ const FeatureList = ({feature}) => {
 	)
 }
 
-export default function Card({name,link,img,feature,category}){
+export default function Card({name,link,img,icon,feature,category}){
+
+	const [isEnter, setIsEnter] = useState(false);
 
 	return(
-			<div className="card rounded-lg md:my-none relative h-fit">
-				<div className="image h-[15rem] w-full overflow-hidden object-cover z-10 my-4">
+			<div
+			className="card md:my-none relative w-[18rem] h-[12rem] rounded-lg overflow-hidden"
+			onMouseEnter={e => setIsEnter(true)}
+			onMouseLeave={e => setIsEnter(false)}
+			>
+
+				<div 
+				className="absolute righ-0 left-0 top-0 bottom-0 z-10">
+					<div className="fixed h-full w-full flex items-center justify-center bg-slate-600/30 backdrop-blur-sm text-yellow-400 uppercase font-lg">
+						See Info
+					</div>
 					<img 
 					src={img} 
-					className="object-cover w-full h-full shadow-lg"
 					alt=""
+					className="w-auto h-full object-cover" 
 					/>
 				</div>
 
-				<div className="content bg-white/10 backdrop-blur-sm h-fit overflow-hidden shadow-md absolute bottom-0 w-full">
-					
-					<div className="px-4 py-1 text-skin-fourth text-sm">
-						{category && <CategoryBtns category={category} />}
+				<div 
+				className={`bg-gradient-to-r from-blue-300/70 via-rose-200 to-blue-300/70 w-full h-full z-20 absolute px-2 py-2 ${isEnter ? 'translate-x-full' : 'translate-x-0'} transition-all duration-200`}
+				>
+					<div className="flex items-center justify-center h-full">
+						<FontAwesomeIcon 
+						icon={icon}
+						className='text-slate-500 text-[4rem] relative z-20 opacity-40'
+						/>
 					</div>
+					<div className="absolute bottom-2 right-2 flex flex-col justify-end items-end text-white">
+						<h3 className="uppercase text-xl text-blue-500">{name}</h3>
 
-					<div className="bg-skin-firth  border-skin-secondary border-t-[0.3rem] py-2">
-						<h3 className="text-center text-lg font-semibold text-skin-fourth">{ name.toUpperCase() }</h3>
+						<ul className="flex gap-2 text-sm text-red-500">
+							{category.map((cate,i) => (
+								<>	
+									<li key={i}>
+										{cate}
+									</li>
+								</>
+							))}
+						</ul>
 					</div>
 
 				</div>
 
-				
+
 			</div>
 	)
 }

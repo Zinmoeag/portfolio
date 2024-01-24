@@ -37,9 +37,9 @@ const Show = () => {
 					</div>
 
 
-					<div className="grid grid-cols-11 bg-skin-transparent relative  z-30 relative  xl:w-full mx-auto md:px-10">
+					<div className="grid grid-cols-11 bg-skin-transparent relative  z-30 relative xl:w-full mx-auto md:px-20">
 
-						<h3 className="impact text-[2rem] md:text-[3rem] px-4 md:px-8 text-white py-4  absolute top-[-8rem] w-full">
+						<h3 className="impact text-[2rem] md:text-[3rem] px-4 md:px-8 text-white py-4  absolute top-[-8rem] w-full uppercase">
 							{data.name}
 						</h3>
 						<section className="col-span-11 xl:col-span-7">
@@ -102,8 +102,8 @@ const Show = () => {
 							</div>
 						</section>
 					</div>
+					<Footer 	/>
 				</div>
-				<Footer 	/>
 			</PageTransition>
 		)
 	}

@@ -6,8 +6,8 @@ import  "../assets/css/toggler.css";
 
 export default function ThemeToggler() {
 
-	const {theme,setTheme} = useTheme();
-	const [hoveredTheme,setHoveredTheme] = useState("");
+	const {theme, setTheme} = useTheme();
+	const [hoveredTheme, setHoveredTheme] = useState("");
 
 	useEffect(() => {
 		setHoveredTheme(theme);

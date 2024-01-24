@@ -12,7 +12,7 @@ import { AnimatePresence } from 'framer-motion';
 
   
 function App() {
-  // console.clear()
+
   const {theme} = useTheme();
   const location = useLocation();
 
@@ -21,8 +21,6 @@ function App() {
 
       <div className={`${theme === "light" ? "light" : ""}`}>
           <Nav />
-
-          <AnimatePresence>
 
              <Routes location={location}
                 key={location.pathname}>
@@ -44,8 +42,6 @@ function App() {
                 >
                 </Route>
             </Routes>
-
-          </AnimatePresence>
 
           <ImageDisplay />
       </div>

@@ -1,5 +1,3 @@
-import  ProgressBtn from "../../../components/ProgressBtn.js";
-
 export default function Herotext(){
 	return(
 		<div className="w-[17em] mt-10 lg:mt-0">
@@ -29,11 +27,8 @@ export default function Herotext(){
 					</div>
 				</div>
 			</div>
-			<div className="flex items-center justify-center text-skin-fourth text-[1rem] text-skin-fifth mt-4 lg:mt-0">
-				<p>I am excited to share with you my passion for Web Development and the work that I have created.</p>
-			</div>
-			<div className="button h-[30%] lg:flex items-center justify-center lg:hidden text-[0.8em] mt-8 md:mt-20 text-skin-sixth">
-				<ProgressBtn to={"/home"} text={"Explore"} />	
+			<div className="flex items-center justify-center text-skin-fourth sm:text-[1rem] text-[0.8rem] text-skin-fifth mt-4 lg:mt-0">
+				<p className="uppercase">I am excited to share with you my passion for Web Development and the work that I have created.</p>
 			</div>
 		</div>
 	)

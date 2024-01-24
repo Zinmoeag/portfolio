@@ -1,4 +1,3 @@
-import {useState} from "react";
 import useScrollPoint from "../../../utilites/useScrollPoint";
 import searcher from "../../../assets/image/background/searcher.jpg";
 import "../../../assets/css/searcher.css";

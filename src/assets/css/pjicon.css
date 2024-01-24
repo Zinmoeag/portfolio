@@ -1,0 +1,16 @@
+.icon{
+  animation: moving 3s ease-in-out infinite;
+}
+
+@keyframes moving {
+  0% {
+    transform: translateY(0);
+    
+  }
+  50% {
+    transform: translateY(-20%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

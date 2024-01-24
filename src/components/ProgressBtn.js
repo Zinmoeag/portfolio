@@ -56,7 +56,7 @@ export default function ProgressBtn({to,text}) {
 			
 			<button 
 			type="button" 
-			className={`main-btn bg-skin-secondary text-lg font-bold ${isClicked && "progress"} text-skin-fourth  rounded-[5rem]`}
+			className={`main-btn bg-skin-secondary text-md  ${isClicked && "progress"} text-skin-main uppercase  rounded-[5rem] font-bold`}
 			onClick ={handleClick}
 			onAnimationEnd={handleRedirect}>
 				{text}

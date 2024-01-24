@@ -9,6 +9,11 @@ export default function Ability(){
 
 	const {theme} = useTheme();
 
+	const handleDownladFile = () => {
+		const file = process.env.PUBLIC_URL + "/cv.pdf";
+		window.open(file, '_blank');
+	}
+
 	return (
 		<>
 			<section className="ability lg:px-20 relative bg-skin-firth lg:bg-skin-transparent relative z-10">
@@ -43,11 +48,20 @@ export default function Ability(){
 										I also possess excellent communication skills and can work effectively with clients and team members to understand their requirements and deliver solutions that meet their needs.
 									</p>
 								</div>
+
+								<div className="flex justify-center">
+									<button
+									onClick={handleDownladFile}
+									className="text-skin-secondary text-sm bg-blue-400 px-6 py-2 rounded-full hover:bg-slate-400"
+									>
+										Download CV
+									</button>
+								</div>
+
 							</div>
+
 						</SectionAnimation>	
 					</div>
-
-					
 				</div>
 
 				<div className="bg-gradient-to-r from-skin-secondary to-skin-secondary/30 absolute top-[63%] left-0 w-[100%] h-[7rem] z-10" ></div>

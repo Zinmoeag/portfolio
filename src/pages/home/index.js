@@ -8,7 +8,7 @@ export default function Home(){
 		<div className="bg-skin-main overflow-hidden">
 			<Searcher />
 			<TagContainer />
-			<section className="lg:mx-20 md:mx-10 mx-4  mb-40">
+			<section className="lg:mx-36 md:mx-10 mx-4 mb-40">
 				<BlogContainer />
 			</section>
 			<Footer />

@@ -1,6 +1,9 @@
+import { faCartShopping, faFile, faList, faPaw, faPlateWheat, faCode } from '@fortawesome/free-solid-svg-icons';
+
 const project = {
 	deliziosa : {
 		id:1,
+		icon: faPlateWheat,
 		name:"deliziosa",
 		slug:'deliziosa',
 		github:"https://github.com/Zinmoeag/Deliziosa",
@@ -32,6 +35,7 @@ const project = {
 	},	
 	todolist: {
 		id:2,
+		icon:faList,
 		name:"todolist",
 		slug:'todolist',
 		github:"https://github.com/Zinmoeag/TODO_list",
@@ -51,6 +55,7 @@ const project = {
 	},
 	creative_coder_testing:{
 		id:3,
+		icon : faFile,
 		name:"creative coder testing",
 		slug:'creative_coder_testing',
 		img:"creative_coder/productfilter.JPG",
@@ -106,6 +111,7 @@ const project = {
 	},
 	petshop:{
 		id:4,
+		icon : faPaw,
 		name:"petshop",
 		slug:'petshop',
 		github:"https://github.com/Zinmoeag/Pet-universe",
@@ -149,6 +155,7 @@ const project = {
 	},
 	laracamp:{
 		id:5,
+		icon: faCartShopping,
 		name:"laracamp(e-commerce)",
 		slug:'laracamp',
 		github:"https://github.com/lara-camp/e-commerce",
@@ -199,6 +206,7 @@ const project = {
 	},
 	zodiac:{
 		id:6,
+		icon:faCode,
 		name:"Zodiac",	
 		slug:'zodiac',
 		github:"https://github.com/Zinmoeag/zodiac",

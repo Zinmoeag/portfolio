@@ -1,10 +1,11 @@
 import Hero from "./components/Hero.js";
 import Skill from "./components/Skill.js";
 import Ability from "./components/Ability.js";
-import Footer from "./components/Footer.js";
+import Footer from "../../components/Footer.js";
 import Terminal from './components/Terminal.js';
 import '@fortawesome/fontawesome-free/css/all.min.css'
 import useScroll from '../../hooks/useScrollTop.js'
+import Projects from "./components/Project.js";
 
 
 export default function Welcome(){
@@ -15,6 +16,7 @@ export default function Welcome(){
 			<Terminal />
 			<Ability />
 			<Skill />
+			<Projects />
 			<Footer />
 		</div>
 	)

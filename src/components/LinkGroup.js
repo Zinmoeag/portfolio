@@ -10,21 +10,21 @@ export default function LinkGroup(){
 
 	return(
 		<>
-			<div className="flex items-center justify-center w-fit">
+			<div className="flex items-center justify-center w-fit gap-4">
 				<a href={myData.links.facebook} target="blank">
-				   <button className="w-[3.5rem] h-[3rem] bg-blue-500 hover:bg-blue-600 text-white ">
+				   <button className="hover:text-yellow-400  rounded-full">
 			        		<FontAwesomeIcon icon={faFacebook} className="text-xl" />
 			      </button>
 			    </a>
 
 			      <a href={myData.links.github} target="blank">
-			      	<button className="w-[3.5rem] h-[3rem] bg-slate-500 hover:bg-slate-600 text-white">
+			      	<button className="hover:text-yellow-400 rounded-full">
 				       <FontAwesomeIcon icon={faGithub} className="text-xl" />
 				      </button>
 			      </a>
 			      
 			      <a href={myData.links.linkedIn} target="blank">
-				      <button className="w-[3.5rem] h-[3rem] bg-blue-500 hover:bg-blue-600 text-white ">
+				      <button className=" hover:text-yellow-400 rounded-full">
 				       	  <div className="font-bold text-2xl">in</div>
 				      </button>
 			      </a>

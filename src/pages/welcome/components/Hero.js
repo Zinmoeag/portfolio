@@ -9,7 +9,6 @@ import SectionAnimation from "../../../components/SectionAnimation.js";
 import  "../../../assets/css/progressbar.css";
 import  "../../../assets/css/herotext.css";
 import HeroText from "./Herotext.js";
-import ParticlesComponent from '../../../components/Particles.js'
 
 
 export default function Hero(){
@@ -21,7 +20,7 @@ export default function Hero(){
 		<>
 		<section className="h-fit relative overflow-hidden">
 			<div className='relative z-0'>
-				<ParticlesComponent />
+
 			</div>
 			<div className="back absolute w-[100vw] h-[100vh] z-10 hidden lg:block">
 				<div className="grid grid-cols-11">
@@ -35,7 +34,7 @@ export default function Hero(){
 			<div className="content lg:h-[100vh] flex flex-col justify-between relative z-30">
 
 				<SectionAnimation>
-					<div className="grid grid-cols-11 h-[100vh] lg:h-[70vh] pt-20 text-[20px] md:text-[35px] lg:text-[50px]">
+					<div className="grid grid-cols-11 h-[100vh] lg:h-[70vh] md:pt-36 pt-20 text-[20px] md:text-[35px] lg:text-[50px]">
 
 						<div 
 							className="col-span-11 mx-4 text-skin-secondary flex items-center justify-center
@@ -55,11 +54,6 @@ export default function Hero(){
 					</div>
 				</SectionAnimation>
 				
-
-				<div className="button h-[30%] lg:flex items-center justify-center hidden text-skin-fourth">
-					<ProgressBtn to={"/home"} text={"Explore"} />	
-				</div>
-
 			</div>
 
 		</section>

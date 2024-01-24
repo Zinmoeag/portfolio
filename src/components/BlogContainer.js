@@ -36,7 +36,11 @@ function PaginateBtn ({paginateBtn,setPageNo, setQueryParams}) {
 export default function BlogContainer(){
 
 	const {search,page,category,setQueryParams} = useCurrentUri();
-	const {data,setFilter} = useProjectData();
+	const {
+		data,
+		setFilter,
+		totalProjects,
+	} = useProjectData();
 
 	useScroll([search,page,category],300)
 	const {paginatedPage,pages} = data;
@@ -57,16 +61,15 @@ export default function BlogContainer(){
 	return(
 
 		<>
-		<div className=" md:mx-none">
+		<div className="md:mx-none">
 
-			<div className="text-skin-sixth border-b-[0.1rem] border-slate-600  mb-4  uppercase flex justify-between">
+			<div className="text-skin-sixth border-b-[0.1rem] border-slate-600 mb-4 uppercase flex justify-between">
 
 				<h3 className="pb-4 impact text-xl " >
 					{category && <span className="text-slate-500">{category}</span>}
 					
 					{search &&  <span className="text-skin-secondary"> /  {search} </span> }
 				</h3>
-
 				<DropDown
 					name="sort"
 					data = {[
@@ -77,13 +80,21 @@ export default function BlogContainer(){
 			</div>
 		</div>
 
-		<div className= "card-container grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 md:gap-6" id="cardSectionId">
+		{paginatedPage && (
+			<>
+			<h3 className="text-slate-400">
+				Showing {paginatedPage.length} of {totalProjects}
+			</h3>
+			</>
+		)}
+		<div className="card-container flex flex-wrap items-center justify-center gap-12 py-10" id="cardSectionId">
 
 			{paginatedPage && paginatedPage.map((d,i) => {
 				return(
-					<Link to={`/projects/${d.slug}`}>
+					<Link to={`/projects/${d.slug}`} key={d.id}>
 						<Card 
-						key={d.id} 
+						key={d.id}
+						icon={d.icon} 
 						name={d.name} 
 						link={d.github} 
 						feature={d.feature} 
@@ -95,7 +106,10 @@ export default function BlogContainer(){
 			})}
 		</div>
 
-		{paginateBtn.length > 1 && <PaginateBtn paginateBtn={paginateBtn} setQueryParams={setQueryParams} />}
+		<div className="">
+			{paginateBtn.length > 1 && <PaginateBtn paginateBtn={paginateBtn} setQueryParams={setQueryParams} />}
+		</div>
+
 
 		</>
 	)

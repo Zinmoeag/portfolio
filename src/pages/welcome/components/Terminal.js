@@ -15,9 +15,7 @@ const Terminal = () => {
 	const [step, setStep] = useState(state);
 	const TerminalRef = useRef(null);
 	const [data, setData] = useState(null);
-	const [id, setId] = useState(null);
 	const [page,setPage] = useState("");
-	const [error, setError] = useState(null);
 
 	const [terminal, setTerminal] = useState("")
 
@@ -87,7 +85,8 @@ const Terminal = () => {
 			setStep(state)
 			setData(null)
 		}
-	},[terminal, step, state])
+		
+	},[TerminalRef, terminal])
 
 
 	const handleSubmit = (e) => {
