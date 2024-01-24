@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.8dc877fe.css",
-    "main.js": "/portfolio/static/js/main.274798a3.js",
+    "main.css": "/portfolio/static/css/main.f25f159d.css",
+    "main.js": "/portfolio/static/js/main.f155120e.js",
     "static/js/787.1ed0c42c.chunk.js": "/portfolio/static/js/787.1ed0c42c.chunk.js",
     "static/media/home.png": "/portfolio/static/media/home.3e81c72fbc67e01010f1.png",
     "static/media/footer.jpg": "/portfolio/static/media/footer.ce4dd131a7171a2fae53.jpg",
@@ -20,11 +20,14 @@
     "static/media/quote.JPG": "/portfolio/static/media/quote.977896f15d8516453a19.JPG",
     "static/media/fa-brands-400.woff2": "/portfolio/static/media/fa-brands-400.e033a13ee751afc1860c.woff2",
     "static/media/productfilter.JPG": "/portfolio/static/media/productfilter.320be70af09f77e03479.JPG",
+    "static/media/time.png": "/portfolio/static/media/time.a78739650c7a6b039e74.png",
     "static/media/donation.JPG": "/portfolio/static/media/donation.1c7a8a3ea4a152fc7ef0.JPG",
     "static/media/orderinfo.JPG": "/portfolio/static/media/orderinfo.027bdec8b938a28bbd30.JPG",
     "static/media/hero.jpg": "/portfolio/static/media/hero.4a6c7757805e39baed4b.jpg",
+    "static/media/web.png": "/portfolio/static/media/web.cfe390d9421d23c06ce0.png",
     "static/media/menctionSponser.JPG": "/portfolio/static/media/menctionSponser.cd083ec088c043369fa9.JPG",
     "static/media/chef.JPG": "/portfolio/static/media/chef.c836b2ff06bc667157ad.JPG",
+    "static/media/code.png": "/portfolio/static/media/code.9aa84a16a0d949e85320.png",
     "static/media/product.JPG": "/portfolio/static/media/product.466cc2e6bed86894f45d.JPG",
     "static/media/blogmanagement.JPG": "/portfolio/static/media/blogmanagement.1357f8da44e260d7b4e4.JPG",
     "static/media/main.JPG": "/portfolio/static/media/main.50909ad281dcbcd3f210.JPG",
@@ -49,12 +52,12 @@
     "static/media/fa-v4compatibility.ttf": "/portfolio/static/media/fa-v4compatibility.0e3a648be390bd8cb094.ttf",
     "static/media/fa-v4compatibility.woff2": "/portfolio/static/media/fa-v4compatibility.68577e40f3e70067b5da.woff2",
     "index.html": "/portfolio/index.html",
-    "main.8dc877fe.css.map": "/portfolio/static/css/main.8dc877fe.css.map",
-    "main.274798a3.js.map": "/portfolio/static/js/main.274798a3.js.map",
+    "main.f25f159d.css.map": "/portfolio/static/css/main.f25f159d.css.map",
+    "main.f155120e.js.map": "/portfolio/static/js/main.f155120e.js.map",
     "787.1ed0c42c.chunk.js.map": "/portfolio/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8dc877fe.css",
-    "static/js/main.274798a3.js"
+    "static/css/main.f25f159d.css",
+    "static/js/main.f155120e.js"
   ]
 }
